@@ -1,0 +1,10 @@
+data en   0 = 00000000000000000000000000010100                    7
+data en   1 = 00000000000000000000000000000000                   17
+data en   2 = 00000000000000000000000000100001                   27
+data en   3 = 00000000000000000000000001000001                   37
+data en   4 = 00000000000000000000000000001100                   47
+data en   5 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                   57
+data en   6 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                   67
+data en   7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                   77
+data en   8 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                   87
+data en   9 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                   97

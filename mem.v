@@ -9,7 +9,7 @@ module inst_ram256x32(output reg[31:0] DataOut, input Enable, ReadWrite, input [
 
      always @ (Enable) //When Enable = 1
         if(Enable)
-            if(!ReadWrite) DataOut = Mem[Address]; //
+            if(ReadWrite) DataOut = Mem[Address]; //ReadWrite = 0
 
 endmodule 
 
@@ -22,7 +22,7 @@ module data_ram256x32(output reg[31:0] DataOut, input Enable, ReadWrite, input[3
 
     always @ (Enable, ReadWrite)
         if (Enable)
-            if (ReadWrite)  Mem[Address] = DataIn;
-            else DataOut = Mem[Address];
+            if (ReadWrite) DataOut = Mem[Address]; 
+            else Mem[Address] = DataIn;
 
 endmodule
