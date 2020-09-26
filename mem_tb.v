@@ -1,28 +1,28 @@
 `include "mem.v"
 module RAM_Access;
 
-integer fi, fo, code, i; reg [31:0] data;
-reg Enable, ReadWrite; reg [31:0] DataIn;
-reg [6:0] Address; wire [31:0] DataOut;
-data_ram256x32 ram1 (DataOut, Enable, ReadWrite, Address, DataIn);
+integer file, fo, code, i; reg [31:0] data;
+reg Enable;
+reg [31:0] Address; wire [31:0] DataOut;
+inst_ram256x32 ram1 (DataOut, Enable, Address);
 
 initial begin
-    fi = $fopen("input_file.txt","r");
-    Address = 7'b0000000;
-        while (!$feof(fi)) begin
-        code = $fscanf(fi, "%d", data);
+    file = $fopen("input_file.txt","rb");
+    Address = 32'b00000000000000000000000000000000;
+        while (!$feof(file)) begin //while not the end of file
+        code = $fscanf(file, "%b", data);
         ram1.Mem[Address] = data;
         Address = Address + 1;
     end
 
-$fclose(fi);
+$fclose(file);
 end
 
 initial begin
     fo = $fopen("memcontent.txt", "w");
-    Enable = 1'b0; ReadWrite = 1'b1;
-    Address = #1 7'b0000000;
-    repeat (10) begin
+    Enable = 1'b0; //ReadWrite = 1'b0;
+    Address = #1 32'b00000000000000000000000000000000; //make sure adress is in 0 after precharge
+    repeat (18) begin
     #5 Enable = 1'b1;
     #5 Enable = 1'b0;
     Address = Address + 1;
