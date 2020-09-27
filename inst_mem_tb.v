@@ -1,10 +1,10 @@
 `include "mem.v"
 module instmem_tb;
 
-integer file, fo, code, i; reg [31:0] data;
+integer file, fw, code, i; reg [31:0] data;
 reg Enable;
 reg [31:0] Address; wire [31:0] DataOut;
-inst_ram256x8 ram1 (DataOut, Enable, Address);
+inst_ram256x8 ram1 (DataOut, Enable, Address );
 
 initial begin
     file = $fopen("inst_input_file.txt","rb");
@@ -19,10 +19,10 @@ $fclose(file);
 end
 
 initial begin
-    fo = $fopen("inst_memcontent.txt", "w");
+    fw = $fopen("inst_memcontent.txt", "w");
     Enable = 1'b0; 
     Address = #1 32'b00000000000000000000000000000000; //make sure adress is in 0 after precharge
-    repeat (18) begin
+    repeat (17) begin
     #5 Enable = 1'b1;
     #5 Enable = 1'b0;
     Address = Address + 1;
@@ -32,6 +32,6 @@ end
 always @ (posedge Enable)
     begin
     #1;   
-    $fdisplay(fo,"data en %d = %b %d", Address, DataOut, $time);
+    $fdisplay(fw,"data en %d = %b %d", Address, DataOut, $time);
 end
 endmodule
