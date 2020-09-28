@@ -21,7 +21,7 @@ end
 
 initial begin
     fw = $fopen("data_memcontent.txt", "w");
-    Enable = 1'b0; ReadWrite = 1'b1;
+    Enable = 1'b0; ReadWrite = 1'b0;
     Address = #1 32'b00000000000000000000000000000000; //make sure adress is in 0 after precharge
     repeat (18) begin
     #5 Enable = 1'b1;
