@@ -1,18 +1,17 @@
-ReadWrite: 0 -- Address:          0 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000010101010-- Time:                    7
-ReadWrite: 0 -- Address:          1 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000010101010-- Time:                   17
-ReadWrite: 0 -- Address:          2 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000010101010-- Time:                   27
-ReadWrite: 0 -- Address:          3 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000010101010-- Time:                   37
-ReadWrite: 0 -- Address:          4 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000011111111-- Time:                   47
-ReadWrite: 0 -- Address:          5 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000011111111-- Time:                   57
-ReadWrite: 0 -- Address:          6 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000000000000-- Time:                   67
-ReadWrite: 0 -- Address:          7 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000000000000-- Time:                   77
-ReadWrite: 0 -- Address:          8 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000001010101-- Time:                   87
-ReadWrite: 0 -- Address:          9 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000001010101-- Time:                   97
-ReadWrite: 0 -- Address:         10 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000001010101-- Time:                  107
-ReadWrite: 0 -- Address:         11 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000001010101-- Time:                  117
-ReadWrite: 0 -- Address:         12 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000000000000-- Time:                  127
-ReadWrite: 0 -- Address:         13 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000000000000-- Time:                  137
-ReadWrite: 0 -- Address:         14 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000011111111-- Time:                  147
-ReadWrite: 0 -- Address:         15 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000011111111-- Time:                  157
-ReadWrite: 0 -- Address:         16 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000011111111-- Time:                  167
-ReadWrite: 0 -- Address:         17 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 000000000000000000000000xxxxxxxx-- Time:                  177
+-------------- Reading Word from Addresses 0, 4, 8 and 12 ----------------
+
+ReadWrite: 0 -- Address:          0 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 10101010101010101010101010101010 -- Time:                   12
+ReadWrite: 0 -- Address:          4 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 11111111111111110000000000000000 -- Time:                   23
+ReadWrite: 0 -- Address:          8 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 01010101010101010101010101010101 -- Time:                   34
+ReadWrite: 0 -- Address:         12 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000001111111111111111 -- Time:                   45
+
+
+-------------- Reading Byte from Address 0 ----------------
+
+ReadWrite: 0 -- Address:          0 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000010101010 -- Time:                   56
+
+
+-------------- Reading Half-Word from Addresses 2 and 4 ----------------
+
+ReadWrite: 0 -- Address:          2 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000001010101010101010 -- Time:                   67
+ReadWrite: 0 -- Address:          4 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000001111111111111111 -- Time:                   78
