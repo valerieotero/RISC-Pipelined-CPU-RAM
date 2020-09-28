@@ -7,151 +7,154 @@
 :vpi_module "vhdl_textio";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_00000000008686d0 .scope module, "data_ram256x8" "data_ram256x8" 2 25;
+S_0000000000f39880 .scope module, "data_ram256x8" "data_ram256x8" 2 23;
  .timescale 0 0;
     .port_info 0 /OUTPUT 32 "DataOut";
     .port_info 1 /INPUT 1 "Enable";
     .port_info 2 /INPUT 1 "ReadWrite";
     .port_info 3 /INPUT 32 "Address";
     .port_info 4 /INPUT 32 "DataIn";
-o000000000087df98 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
-v0000000000868860_0 .net "Address", 31 0, o000000000087df98;  0 drivers
-o000000000087dfc8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
-v0000000000876f20_0 .net "DataIn", 31 0, o000000000087dfc8;  0 drivers
-v0000000000876fc0_0 .var "DataOut", 31 0;
-o000000000087e028 .functor BUFZ 1, C4<z>; HiZ drive
-v0000000000877060_0 .net "Enable", 0 0, o000000000087e028;  0 drivers
-v0000000000877100 .array "Mem", 255 0, 31 0;
-o000000000087e058 .functor BUFZ 1, C4<z>; HiZ drive
-v0000000000842db0_0 .net "ReadWrite", 0 0, o000000000087e058;  0 drivers
-E_00000000009ca9d0 .event edge, v0000000000842db0_0, v0000000000877060_0;
-S_0000000000876d90 .scope module, "instmem_tb" "instmem_tb" 3 2;
+o0000000000f4dfd8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000000000f39a10_0 .net "Address", 31 0, o0000000000f4dfd8;  0 drivers
+o0000000000f4e008 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v00000000001eb1e0_0 .net "DataIn", 31 0, o0000000000f4e008;  0 drivers
+v0000000000f46f90_0 .var "DataOut", 31 0;
+o0000000000f4e068 .functor BUFZ 1, C4<z>; HiZ drive
+v0000000000f47030_0 .net "Enable", 0 0, o0000000000f4e068;  0 drivers
+v0000000000f470d0 .array "Mem", 255 0, 31 0;
+o0000000000f4e098 .functor BUFZ 1, C4<z>; HiZ drive
+v0000000000f47170_0 .net "ReadWrite", 0 0, o0000000000f4e098;  0 drivers
+E_00000000001ea9e0 .event edge, v0000000000f47170_0, v0000000000f47030_0;
+S_0000000000f46e00 .scope module, "instmem_tb" "instmem_tb" 3 2;
  .timescale 0 0;
-v0000000000872c90_0 .var "Address", 31 0;
-v0000000000872d30_0 .net "DataOut", 31 0, v0000000000843080_0;  1 drivers
-v0000000000872dd0_0 .var "Enable", 0 0;
-v0000000000873c80_0 .var/2u *"_s0", 31 0; Local signal
-v0000000000873460_0 .var/i "code", 31 0;
-v0000000000873a00_0 .var "data", 31 0;
-v0000000000873dc0_0 .var/i "file", 31 0;
-v00000000008735a0_0 .var/i "fw", 31 0;
-E_00000000009caa90 .event posedge, v0000000000843120_0;
-S_0000000000842e50 .scope module, "ram1" "inst_ram256x8" 3 7, 2 8 0, S_0000000000876d90;
+v0000000000f9e850_0 .var "Address", 31 0;
+v0000000000f9e8f0_0 .net "DataOut", 31 0, v0000000000f131a0_0;  1 drivers
+v0000000000f9e990_0 .var "Enable", 0 0;
+v0000000000f9f200_0 .var/2u *"_s0", 31 0; Local signal
+v0000000000f9f340_0 .var/i "code", 31 0;
+v0000000000f9ebc0_0 .var "data", 31 0;
+v0000000000f9eee0_0 .var/i "file", 31 0;
+v0000000000f9f7a0_0 .var/i "fw", 31 0;
+E_00000000001eaaa0 .event posedge, v0000000000f13240_0;
+S_0000000000f12f70 .scope module, "ram1" "inst_ram256x8" 3 8, 2 7 0, S_0000000000f46e00;
  .timescale 0 0;
     .port_info 0 /OUTPUT 32 "DataOut";
     .port_info 1 /INPUT 1 "Enable";
     .port_info 2 /INPUT 32 "Address";
-v0000000000842fe0_0 .net "Address", 31 0, v0000000000872c90_0;  1 drivers
-v0000000000843080_0 .var "DataOut", 31 0;
-v0000000000843120_0 .net "Enable", 0 0, v0000000000872dd0_0;  1 drivers
-v0000000000872bf0 .array "Mem", 255 0, 7 0;
-E_00000000009ca790 .event edge, v0000000000843120_0;
-    .scope S_00000000008686d0;
+v0000000000f13100_0 .net "Address", 31 0, v0000000000f9e850_0;  1 drivers
+v0000000000f131a0_0 .var "DataOut", 31 0;
+v0000000000f13240_0 .net "Enable", 0 0, v0000000000f9e990_0;  1 drivers
+v0000000000f132e0 .array "Mem", 255 0, 7 0;
+E_00000000001ea420 .event edge, v0000000000f13240_0;
+    .scope S_0000000000f39880;
 T_0 ;
-    %wait E_00000000009ca9d0;
-    %load/vec4 v0000000000877060_0;
+    %wait E_00000000001ea9e0;
+    %load/vec4 v0000000000f47030_0;
     %flag_set/vec4 8;
     %jmp/0xz  T_0.0, 8;
-    %load/vec4 v0000000000842db0_0;
+    %load/vec4 v0000000000f47170_0;
     %flag_set/vec4 8;
     %jmp/0xz  T_0.2, 8;
-    %load/vec4 v0000000000876f20_0;
-    %ix/getv 4, v0000000000868860_0;
-    %store/vec4a v0000000000877100, 4, 0;
+    %load/vec4 v00000000001eb1e0_0;
+    %ix/getv 4, v0000000000f39a10_0;
+    %store/vec4a v0000000000f470d0, 4, 0;
     %jmp T_0.3;
 T_0.2 ;
-    %load/vec4 v0000000000876f20_0;
-    %ix/getv 4, v0000000000868860_0;
-    %store/vec4a v0000000000877100, 4, 0;
+    %load/vec4 v00000000001eb1e0_0;
+    %ix/getv 4, v0000000000f39a10_0;
+    %store/vec4a v0000000000f470d0, 4, 0;
 T_0.3 ;
 T_0.0 ;
     %jmp T_0;
     .thread T_0, $push;
-    .scope S_0000000000842e50;
+    .scope S_0000000000f12f70;
 T_1 ;
-    %wait E_00000000009ca790;
-    %load/vec4 v0000000000843120_0;
+    %wait E_00000000001ea420;
+    %load/vec4 v0000000000f13240_0;
     %flag_set/vec4 8;
     %jmp/0xz  T_1.0, 8;
-    %load/vec4 v0000000000842fe0_0;
+    %load/vec4 v0000000000f13100_0;
     %cmpi/e 0, 0, 32;
     %flag_mov 8, 4;
-    %load/vec4 v0000000000842fe0_0;
+    %load/vec4 v0000000000f13100_0;
     %pushi/vec4 4, 0, 32;
     %mod;
     %cmpi/e 0, 0, 32;
     %flag_or 4, 8;
     %jmp/0xz  T_1.2, 4;
-    %ix/getv 4, v0000000000842fe0_0;
-    %load/vec4a v0000000000872bf0, 4;
-    %load/vec4 v0000000000842fe0_0;
+    %load/vec4 v0000000000f13100_0;
+    %pad/u 33;
+    %addi 0, 0, 33;
+    %ix/vec4 4;
+    %load/vec4a v0000000000f132e0, 4;
+    %load/vec4 v0000000000f13100_0;
     %pad/u 33;
     %addi 1, 0, 33;
     %ix/vec4 4;
-    %load/vec4a v0000000000872bf0, 4;
+    %load/vec4a v0000000000f132e0, 4;
     %concat/vec4; draw_concat_vec4
-    %load/vec4 v0000000000842fe0_0;
+    %load/vec4 v0000000000f13100_0;
     %pad/u 33;
     %addi 2, 0, 33;
     %ix/vec4 4;
-    %load/vec4a v0000000000872bf0, 4;
+    %load/vec4a v0000000000f132e0, 4;
     %concat/vec4; draw_concat_vec4
-    %load/vec4 v0000000000842fe0_0;
+    %load/vec4 v0000000000f13100_0;
     %pad/u 33;
     %addi 3, 0, 33;
     %ix/vec4 4;
-    %load/vec4a v0000000000872bf0, 4;
+    %load/vec4a v0000000000f132e0, 4;
     %concat/vec4; draw_concat_vec4
-    %store/vec4 v0000000000843080_0, 0, 32;
+    %store/vec4 v0000000000f131a0_0, 0, 32;
     %jmp T_1.3;
 T_1.2 ;
-    %ix/getv 4, v0000000000842fe0_0;
-    %load/vec4a v0000000000872bf0, 4;
+    %ix/getv 4, v0000000000f13100_0;
+    %load/vec4a v0000000000f132e0, 4;
     %pad/u 32;
-    %store/vec4 v0000000000843080_0, 0, 32;
+    %store/vec4 v0000000000f131a0_0, 0, 32;
 T_1.3 ;
 T_1.0 ;
     %jmp T_1;
     .thread T_1, $push;
-    .scope S_0000000000876d90;
+    .scope S_0000000000f46e00;
 T_2 ;
-    %vpi_func 3 10 "$fopen" 32, "inst_input_file.txt", "rb" {0 0 0};
-    %store/vec4 v0000000000873dc0_0, 0, 32;
+    %vpi_func 3 12 "$fopen" 32, "inst_input_file.txt", "rb" {0 0 0};
+    %store/vec4 v0000000000f9eee0_0, 0, 32;
     %pushi/vec4 0, 0, 32;
-    %store/vec4 v0000000000872c90_0, 0, 32;
+    %store/vec4 v0000000000f9e850_0, 0, 32;
 T_2.0 ;
-    %vpi_func 3 12 "$feof" 32, v0000000000873dc0_0 {0 0 0};
+    %vpi_func 3 14 "$feof" 32, v0000000000f9eee0_0 {0 0 0};
     %nor/r;
     %flag_set/vec4 8;
     %jmp/0xz T_2.1, 8;
-    %vpi_func 3 13 "$fscanf" 32, v0000000000873dc0_0, "%b", v0000000000873a00_0 {0 0 0};
-    %store/vec4 v0000000000873460_0, 0, 32;
-    %load/vec4 v0000000000873a00_0;
+    %vpi_func 3 15 "$fscanf" 32, v0000000000f9eee0_0, "%b", v0000000000f9ebc0_0 {0 0 0};
+    %store/vec4 v0000000000f9f340_0, 0, 32;
+    %load/vec4 v0000000000f9ebc0_0;
     %pad/u 8;
-    %ix/getv 4, v0000000000872c90_0;
-    %store/vec4a v0000000000872bf0, 4, 0;
-    %load/vec4 v0000000000872c90_0;
+    %ix/getv 4, v0000000000f9e850_0;
+    %store/vec4a v0000000000f132e0, 4, 0;
+    %load/vec4 v0000000000f9e850_0;
     %addi 1, 0, 32;
-    %store/vec4 v0000000000872c90_0, 0, 32;
+    %store/vec4 v0000000000f9e850_0, 0, 32;
     %jmp T_2.0;
 T_2.1 ;
-    %vpi_call 3 18 "$fclose", v0000000000873dc0_0 {0 0 0};
+    %vpi_call 3 20 "$fclose", v0000000000f9eee0_0 {0 0 0};
     %end;
     .thread T_2;
-    .scope S_0000000000876d90;
+    .scope S_0000000000f46e00;
 T_3 ;
-    %vpi_func 3 22 "$fopen" 32, "inst_memcontent.txt", "w" {0 0 0};
-    %store/vec4 v00000000008735a0_0, 0, 32;
+    %vpi_func 3 24 "$fopen" 32, "inst_memcontent.txt", "w" {0 0 0};
+    %store/vec4 v0000000000f9f7a0_0, 0, 32;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0000000000872dd0_0, 0, 1;
+    %store/vec4 v0000000000f9e990_0, 0, 1;
     %pushi/vec4 0, 0, 32;
-    %store/vec4 v0000000000873c80_0, 0, 32;
+    %store/vec4 v0000000000f9f200_0, 0, 32;
     %pushi/vec4 1, 0, 64;
     %ix/vec4 4;
     %delayx 4;
-    %load/vec4 v0000000000873c80_0;
-    %store/vec4 v0000000000872c90_0, 0, 32;
-    %pushi/vec4 17, 0, 32;
+    %load/vec4 v0000000000f9f200_0;
+    %store/vec4 v0000000000f9e850_0, 0, 32;
+    %pushi/vec4 16, 0, 32;
 T_3.0 %dup/vec4;
     %pushi/vec4 0, 0, 32;
     %cmp/s;
@@ -161,24 +164,24 @@ T_3.0 %dup/vec4;
     %sub;
     %delay 5, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0000000000872dd0_0, 0, 1;
+    %store/vec4 v0000000000f9e990_0, 0, 1;
     %delay 5, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0000000000872dd0_0, 0, 1;
-    %load/vec4 v0000000000872c90_0;
+    %store/vec4 v0000000000f9e990_0, 0, 1;
+    %load/vec4 v0000000000f9e850_0;
     %addi 1, 0, 32;
-    %store/vec4 v0000000000872c90_0, 0, 32;
+    %store/vec4 v0000000000f9e850_0, 0, 32;
     %jmp T_3.0;
 T_3.1 ;
     %pop/vec4 1;
-    %vpi_call 3 30 "$finish" {0 0 0};
+    %vpi_call 3 32 "$finish" {0 0 0};
     %end;
     .thread T_3;
-    .scope S_0000000000876d90;
+    .scope S_0000000000f46e00;
 T_4 ;
-    %wait E_00000000009caa90;
+    %wait E_00000000001eaaa0;
     %delay 1, 0;
-    %vpi_call 3 35 "$fdisplay", v00000000008735a0_0, "data en %d = %b %d", v0000000000872c90_0, v0000000000872d30_0, $time {0 0 0};
+    %vpi_call 3 37 "$fdisplay", v0000000000f9f7a0_0, "Data en %d = %h %d", v0000000000f9e850_0, v0000000000f9e8f0_0, $time {0 0 0};
     %jmp T_4;
     .thread T_4;
 # The file index is used to find the file name in the following table.
