@@ -45,7 +45,8 @@ module data_ram256x8(output reg[31:0] DataOut, input Enable, ReadWrite, input[31
             begin
                 if (ReadWrite) //When Write 
                 begin
-                    Mem[Address] = DataIn; 
+                    Mem[Address] = DataIn[15:8]; 
+                    Mem[Address + 1] = DataIn[7:0]; 
                 end
                 else //When Read
                 begin
@@ -57,11 +58,14 @@ module data_ram256x8(output reg[31:0] DataOut, input Enable, ReadWrite, input[31
             begin
                 if (ReadWrite) //When Write 
                 begin
-                    Mem[Address] = DataIn; 
-                end
+                    Mem[Address] = DataIn[31:24];
+                    Mem[Address + 1] = DataIn[23:16];
+                    Mem[Address + 2] = DataIn[15:8]; 
+                    Mem[Address + 3] = DataIn[7:0]; 
+                end                 
                 else //When Read
                 begin
-                     DataOut = {Mem[Address+0], Mem[Address+1], Mem[Address+2], Mem[Address+3]}; 
+                     DataOut = {Mem[Address + 0], Mem[Address + 1], Mem[Address + 2], Mem[Address + 3]}; 
                 end  
             end
           

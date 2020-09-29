@@ -1,17 +1,27 @@
 -------------- Reading Word from Addresses 0, 4, 8 and 12 ----------------
 
-ReadWrite: 0 -- Address:          0 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 10101010101010101010101010101010 -- Time:                   12
-ReadWrite: 0 -- Address:          4 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 11111111111111110000000000000000 -- Time:                   23
-ReadWrite: 0 -- Address:          8 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 01010101010101010101010101010101 -- Time:                   34
-ReadWrite: 0 -- Address:         12 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000001111111111111111 -- Time:                   45
+ReadWrite: 0 | Address:          0 | DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | DataOut: 10101010101010101010101010101010 | Time:                   12
+ReadWrite: 0 | Address:          4 | DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | DataOut: 11111111111111110000000000000000 | Time:                   23
+ReadWrite: 0 | Address:          8 | DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | DataOut: 01010101010101010101010101010101 | Time:                   34
+ReadWrite: 0 | Address:         12 | DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | DataOut: 00000000000000001111111111111111 | Time:                   45
 
 
--------------- Reading Byte from Address 0 ----------------
+-------------- Reading Byte from Address 0; Half-Word from Addresses 2 and 4 ----------------
 
-ReadWrite: 0 -- Address:          0 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000000000000010101010 -- Time:                   56
+ReadWrite: 0 | Address:          0 | DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | DataOut: 00000000000000000000000010101010 | Time:                   56
+ReadWrite: 0 | Address:          2 | DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | DataOut: 00000000000000001010101010101010 | Time:                   67
+ReadWrite: 0 | Address:          4 | DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | DataOut: 00000000000000001111111111111111 | Time:                   78
 
 
--------------- Reading Half-Word from Addresses 2 and 4 ----------------
+-------------- Writing Byte to Address 0; Half-Word to Addresses 2 and 4; Word to Address 8 ----------------
 
-ReadWrite: 0 -- Address:          2 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000001010101010101010 -- Time:                   67
-ReadWrite: 0 -- Address:          4 -- DataIn: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -- DataOut: 00000000000000001111111111111111 -- Time:                   78
+ReadWrite: 1 | Address:          0 | DataIn: 00000000000000000000000010110101 | DataOut: 00000000000000001111111111111111 | Time:                   89
+ReadWrite: 1 | Address:          2 | DataIn: 00000000000000001111111111010011 | DataOut: 00000000000000001111111111111111 | Time:                  100
+ReadWrite: 1 | Address:          4 | DataIn: 00000000000000001111111111010011 | DataOut: 00000000000000001111111111111111 | Time:                  111
+ReadWrite: 1 | Address:          8 | DataIn: 11100011010111011000101011000101 | DataOut: 00000000000000001111111111111111 | Time:                  122
+
+
+-------------- Reading Word from Addresses 4 and 8 ----------------
+
+ReadWrite: 0 | Address:          4 | DataIn: 11100011010111011000101011000101 | DataOut: 11111111110100110000000000000000 | Time:                  133
+ReadWrite: 0 | Address:          8 | DataIn: 11100011010111011000101011000101 | DataOut: 11100011010111011000101011000101 | Time:                  144

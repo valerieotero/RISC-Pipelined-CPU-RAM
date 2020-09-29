@@ -31,34 +31,63 @@ initial begin
     repeat (4) begin          
         #5 Enable = 1'b1;
         #5 Enable = 1'b0;
-        #1 $fdisplay(fw,"ReadWrite: %d -- Address: %d -- DataIn: %b -- DataOut: %b -- Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
         Address = Address + 4;
     end 
 
 
-    $fdisplay(fw, "\n\n-------------- Reading Byte from Address 0 ----------------\n");   
+    $fdisplay(fw, "\n\n-------------- Reading Byte from Address 0; Half-Word from Addresses 2 and 4 ----------------\n");   
     Size = 2'b00; //BYTE
     ReadWrite = 1'b0; //Read
     Address = 0;
-    repeat (1) begin          
+    repeat (3) begin          
         #5 Enable = 1'b1;
         #5 Enable = 1'b0;
-        #1 $fdisplay(fw,"ReadWrite: %d -- Address: %d -- DataIn: %b -- DataOut: %b -- Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
-       // Address = Address + 1;
+        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+        Address = Address + 2;
+        Size = 2'b01; //Switched to HALF-WORD
     end  
 
-       
-    $fdisplay(fw, "\n\n-------------- Reading Half-Word from Addresses 2 and 4 ----------------\n");   
+
+    $fdisplay(fw, "\n\n-------------- Writing Byte to Address 0; Half-Word to Addresses 2 and 4; Word to Address 8 ----------------\n");  
+    Size = 2'b00; //Byte
+    ReadWrite = 1'b1; //Write
+    DataIn = 8'b10110101;
+    Address = 0;
+    #5 Enable = 1'b1;
+    #5 Enable = 1'b0;
+    #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+    Address = Address + 2;  
+              
     Size = 2'b01; //HALF-WORD
-    ReadWrite = 1'b0; //Read
-    Address = 2;
+    ReadWrite = 1'b1; //Write
+    DataIn = 16'b1111111111010011;    
     repeat (2) begin          
         #5 Enable = 1'b1;
         #5 Enable = 1'b0;
-        #1 $fdisplay(fw,"ReadWrite: %d -- Address: %d -- DataIn: %b -- DataOut: %b -- Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
-        Address = Address + 2;
+        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+        Address = Address + 2;               
     end   
+     
+    Size = 2'b10; //WORD
+    ReadWrite = 1'b1; //Write
+    DataIn = 32'b11100011010111011000101011000101;
+    Address = 8;
+    #5 Enable = 1'b1;
+    #5 Enable = 1'b0;
+    #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
 
+
+    $fdisplay(fw, "\n\n-------------- Reading Word from Addresses 4 and 8 ----------------\n");   
+    Size = 2'b10; //WORD
+    ReadWrite = 1'b0; //Read
+    Address = 4;
+    repeat (2) begin          
+        #5 Enable = 1'b1;
+        #5 Enable = 1'b0;
+        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+        Address = Address + 4;
+    end 
 
 $finish;
 end
