@@ -1,0 +1,27 @@
+-------------- Reading Word from Addresses 0, 4, 8 and 12 ----------------
+
+ReadWrite: 0 | Address:          0 | DataIn: xxxxxxxx | DataOut: aaaaaaaa | Time:                   12
+ReadWrite: 0 | Address:          4 | DataIn: xxxxxxxx | DataOut: ffff0000 | Time:                   23
+ReadWrite: 0 | Address:          8 | DataIn: xxxxxxxx | DataOut: 55555555 | Time:                   34
+ReadWrite: 0 | Address:         12 | DataIn: xxxxxxxx | DataOut: 0000ffff | Time:                   45
+
+
+-------------- Reading Byte from Address 0; Half-Word from Addresses 2 and 4 ----------------
+
+ReadWrite: 0 | Address:          0 | DataIn: xxxxxxxx | DataOut: 000000aa | Time:                   56
+ReadWrite: 0 | Address:          2 | DataIn: xxxxxxxx | DataOut: 0000aaaa | Time:                   67
+ReadWrite: 0 | Address:          4 | DataIn: xxxxxxxx | DataOut: 0000ffff | Time:                   78
+
+
+-------------- Writing Byte to Address 0; Half-Word to Addresses 2 and 4; Word to Address 8 ----------------
+
+ReadWrite: 1 | Address:          0 | DataIn: 000000b5 | DataOut: 0000ffff | Time:                   89
+ReadWrite: 1 | Address:          2 | DataIn: 0000ffd3 | DataOut: 0000ffff | Time:                  100
+ReadWrite: 1 | Address:          4 | DataIn: 0000ffd3 | DataOut: 0000ffff | Time:                  111
+ReadWrite: 1 | Address:          8 | DataIn: e35d8ac5 | DataOut: 0000ffff | Time:                  122
+
+
+-------------- Reading Word from Addresses 4 and 8 ----------------
+
+ReadWrite: 0 | Address:          4 | DataIn: e35d8ac5 | DataOut: ffd30000 | Time:                  133
+ReadWrite: 0 | Address:          8 | DataIn: e35d8ac5 | DataOut: e35d8ac5 | Time:                  144

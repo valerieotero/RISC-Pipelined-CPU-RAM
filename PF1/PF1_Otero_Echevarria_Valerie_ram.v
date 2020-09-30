@@ -95,7 +95,7 @@ inst_ram256x8 ram1 (DataOut, Enable, Address );
 
 initial
     begin
-    file = $fopen("inst_input_file.txt","rb");
+    file = $fopen("PF1_Otero_Echevarria_Valerie_ramintr.txt","rb");
     Address = 32'b00000000000000000000000000000000;
         while (!$feof(file)) begin //while not the end of file
         code = $fscanf(file, "%b", data);
@@ -135,7 +135,7 @@ data_ram256x8 ram1 (DataOut, Enable, ReadWrite, Address, DataIn, Size);
 
 //Pre-charge memory
 initial begin
-    file = $fopen("data_input_file.txt","rb");
+    file = $fopen("PF1_Otero_Echevarria_Valerie_ramdata.txt","rb");
     Address = 32'b00000000000000000000000000000000;
         while (!$feof(file)) begin //while not the end of file
         code = $fscanf(file, "%b", data);
@@ -158,7 +158,7 @@ initial begin
     repeat (4) begin          
         #5 Enable = 1'b1;
         #5 Enable = 1'b0;
-        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %h | DataOut: %h | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
         Address = Address + 4;
     end 
 
@@ -170,7 +170,7 @@ initial begin
     repeat (3) begin          
         #5 Enable = 1'b1;
         #5 Enable = 1'b0;
-        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %h | DataOut: %h | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
         Address = Address + 2;
         Size = 2'b01; //Switched to HALF-WORD
     end  
@@ -183,7 +183,7 @@ initial begin
     Address = 0;
     #5 Enable = 1'b1;
     #5 Enable = 1'b0;
-    #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+    #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %h | DataOut: %h | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
     Address = Address + 2;  
               
     Size = 2'b01; //HALF-WORD
@@ -192,7 +192,7 @@ initial begin
     repeat (2) begin          
         #5 Enable = 1'b1;
         #5 Enable = 1'b0;
-        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %h | DataOut: %h | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
         Address = Address + 2;               
     end   
      
@@ -202,7 +202,7 @@ initial begin
     Address = 8;
     #5 Enable = 1'b1;
     #5 Enable = 1'b0;
-    #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+    #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %h | DataOut: %h | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
 
 
     $fdisplay(fw, "\n\n-------------- Reading Word from Addresses 4 and 8 ----------------\n");   
@@ -212,7 +212,7 @@ initial begin
     repeat (2) begin          
         #5 Enable = 1'b1;
         #5 Enable = 1'b0;
-        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %b | DataOut: %b | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
+        #1 $fdisplay(fw,"ReadWrite: %d | Address: %d | DataIn: %h | DataOut: %h | Time: %d",ReadWrite, Address, DataIn, DataOut, $time);
         Address = Address + 4;
     end 
 
