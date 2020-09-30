@@ -1,4 +1,4 @@
-`include "mem.v"
+`include "PF1_Otero_Echevarria_Valerie_ram.v"
 module instmem_tb;
 
 integer file, fw, code, i; reg [31:0] data;
@@ -9,7 +9,7 @@ inst_ram256x8 ram1 (DataOut, Enable, Address );
 
 initial
     begin
-    file = $fopen("inst_input_file.txt","rb");
+    file = $fopen("PF1_Otero_Echevarria_Valerie_ramintr.txt","rb");
     Address = 32'b00000000000000000000000000000000;
         while (!$feof(file)) begin //while not the end of file
         code = $fscanf(file, "%b", data);

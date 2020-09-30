@@ -1,5 +1,0 @@
--------------- Reading Word from Addresses 0, 4, 8 and 12 ----------------
-
-ReadWrite: 0 | Address:          0 | DataIn: xxxxxxxx | DataOut: aaaaaaaa | Time:                   12
-ReadWrite: 0 | Address:          4 | DataIn: xxxxxxxx | DataOut: ffff0000 | Time:                   23
-ReadWrite: 0 | Address:          8 | DataIn: xxxxxxxx | DataOut: 55555555 | Time:                   34

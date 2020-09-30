@@ -1,4 +1,0 @@
-Data en          0 = aaaaaaaa                    7
-Data en          4 = ffff0000                   17
-Data en          8 = 55555555                   27
-Data en         12 = 0000ffff                   37
