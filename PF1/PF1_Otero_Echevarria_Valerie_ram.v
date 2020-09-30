@@ -84,7 +84,6 @@ endmodule
 */
 
 //INSTRUCTION MEMORY - TEST 
-//`include "mem.v"
 module instmem_tb;
 
 integer file, fw, code, i; reg [31:0] data;
@@ -110,10 +109,10 @@ initial begin
     fw = $fopen("inst_memcontent.txt", "w");
     Enable = 1'b0; 
     Address = #1 32'b00000000000000000000000000000000; //make sure adress is in 0 after precharge
-    repeat (16) begin
+    repeat (4) begin
     #5 Enable = 1'b1;
     #5 Enable = 1'b0;
-    Address = Address + 1;
+    Address = Address + 4;
 end
 $finish;
 end
@@ -125,7 +124,6 @@ end
 endmodule
 
 //DATA MEMORY - TEST 
-//`include "mem.v"
 module data_mem_tb;
 
 integer file, fw, code, i; reg [31:0] data;

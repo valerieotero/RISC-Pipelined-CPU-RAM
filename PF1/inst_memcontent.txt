@@ -1,14 +1,4 @@
 Data en          0 = aaaaaaaa                    7
-Data en          1 = 000000aa                   17
-Data en          2 = 000000aa                   27
-Data en          3 = 000000aa                   37
-Data en          4 = ffff0000                   47
-Data en          5 = 000000ff                   57
-Data en          6 = 00000000                   67
-Data en          7 = 00000000                   77
-Data en          8 = 55555555                   87
-Data en          9 = 00000055                   97
-Data en         10 = 00000055                  107
-Data en         11 = 00000055                  117
-Data en         12 = 0000ffff                  127
-Data en         13 = 00000000                  137
+Data en          4 = ffff0000                   17
+Data en          8 = 55555555                   27
+Data en         12 = 0000ffff                   37
