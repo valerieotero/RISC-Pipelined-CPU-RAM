@@ -1,4 +1,4 @@
-# RISC-Pipelined-Microprocessor
+# RISC-Pipelined-CPU-RAM
 Computer Architecture and Organization class project (ICOM4215) - Fall 2020
 
 * To run/test the instruction RAM, on a terminal write the following:
