@@ -1,27 +1,17 @@
--------------- Reading Word from Addresses 0, 4, 8 and 12 ----------------
-
-ReadWrite: 0 | Address:          0 | DataIn: xxxxxxxx | DataOut: aaaaaaaa | Time:                   12
-ReadWrite: 0 | Address:          4 | DataIn: xxxxxxxx | DataOut: ffff0000 | Time:                   23
-ReadWrite: 0 | Address:          8 | DataIn: xxxxxxxx | DataOut: 55555555 | Time:                   34
-ReadWrite: 0 | Address:         12 | DataIn: xxxxxxxx | DataOut: 0000ffff | Time:                   45
-
-
--------------- Reading Byte from Address 0; Half-Word from Addresses 2 and 4 ----------------
-
-ReadWrite: 0 | Address:          0 | DataIn: xxxxxxxx | DataOut: 000000aa | Time:                   56
-ReadWrite: 0 | Address:          2 | DataIn: xxxxxxxx | DataOut: 0000aaaa | Time:                   67
-ReadWrite: 0 | Address:          4 | DataIn: xxxxxxxx | DataOut: 0000ffff | Time:                   78
-
-
--------------- Writing Byte to Address 0; Half-Word to Addresses 2 and 4; Word to Address 8 ----------------
-
-ReadWrite: 1 | Address:          0 | DataIn: 000000b5 | DataOut: 0000ffff | Time:                   89
-ReadWrite: 1 | Address:          2 | DataIn: 0000ffd3 | DataOut: 0000ffff | Time:                  100
-ReadWrite: 1 | Address:          4 | DataIn: 0000ffd3 | DataOut: 0000ffff | Time:                  111
-ReadWrite: 1 | Address:          8 | DataIn: e35d8ac5 | DataOut: 0000ffff | Time:                  122
-
-
--------------- Reading Word from Addresses 4 and 8 ----------------
-
-ReadWrite: 0 | Address:          4 | DataIn: e35d8ac5 | DataOut: ffd30000 | Time:                  133
-ReadWrite: 0 | Address:          8 | DataIn: e35d8ac5 | DataOut: e35d8ac5 | Time:                  144
+Data en          4 = 11100010000000010000000000000000                    3
+Data en          8 = 11100011100000000001000000101000                    5
+Data en         12 = 11100111110100010010000000000000                    7
+Data en         16 = 11100101110100010011000000000010                    9
+Data en         20 = 11100000100000000101000000000000                   11
+Data en         24 = 11100000100000100101000000000101                   13
+Data en         28 = 11100010010100110011000000000001                   15
+Data en         32 = 00011010111111111111111111111101                   17
+Data en         36 = 11100101110000010101000000000011                   19
+Data en         40 = 11101010000000000000000000000001                   21
+Data en         44 = 00001011000001010000011100000100                   23
+Data en         48 = 11101010111111111111111111111111                   25
+Data en         52 = 00000000000000000000000000000000                   27
+Data en         56 = 00000000000000000000000000000000                   29
+Data en         60 = 00000000000000000000000000000000                   31
+Data en         64 = 00000000000000000000000000000000                   33
+Data en         68 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                   35
